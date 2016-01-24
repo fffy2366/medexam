@@ -27,6 +27,27 @@ func init() {
 			[]string{"get"},
 			nil})
 
+	beego.GlobalControllerRouter["medexam/controllers:CMSController"] = append(beego.GlobalControllerRouter["medexam/controllers:CMSController"],
+		beego.ControllerComments{
+			"List",
+			`/list.html`,
+			[]string{"get"},
+			nil})
+
+	beego.GlobalControllerRouter["medexam/controllers:CMSController"] = append(beego.GlobalControllerRouter["medexam/controllers:CMSController"],
+		beego.ControllerComments{
+			"Gitpull",
+			`/gitpull`,
+			[]string{"get"},
+			nil})
+
+	beego.GlobalControllerRouter["medexam/controllers:CMSController"] = append(beego.GlobalControllerRouter["medexam/controllers:CMSController"],
+		beego.ControllerComments{
+			"Shell",
+			`/shell`,
+			[]string{"get"},
+			nil})
+
 	beego.GlobalControllerRouter["medexam/controllers:MainController"] = append(beego.GlobalControllerRouter["medexam/controllers:MainController"],
 		beego.ControllerComments{
 			"StaticBlock",
