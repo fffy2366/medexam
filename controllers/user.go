@@ -19,3 +19,8 @@ func (c *UserController) Reg() {
 	c.Data["Email"] = "astaxie@gmail.com"
 	c.TplName = "reg.html"
 }
+func (c *UserController) Forget() {
+	c.Data["Website"] = "beego.me"
+	c.Data["Email"] = "astaxie@gmail.com"
+	c.TplName = "forget_password.html"
+}
