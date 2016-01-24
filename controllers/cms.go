@@ -26,5 +26,5 @@ func (this *CMSController) AllBlock() {
 
 // @router /info.html [get]
 func (this *CMSController) Info() {
-	this.TplNames = "info.html"
+	this.TplName = "info.html"
 }

@@ -11,11 +11,11 @@ type UserController struct {
 func (c *UserController) Login() {
 	c.Data["Website"] = "beego.me"
 	c.Data["Email"] = "astaxie@gmail.com"
-	c.TplNames = "login.html"
+	c.TplName = "login.html"
 }
 
 func (c *UserController) Reg() {
 	c.Data["Website"] = "beego.me"
 	c.Data["Email"] = "astaxie@gmail.com"
-	c.TplNames = "reg.html"
+	c.TplName = "reg.html"
 }

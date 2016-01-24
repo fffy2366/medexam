@@ -11,7 +11,7 @@ type MainController struct {
 func (c *MainController) Get() {
 	c.Data["Website"] = "beego.me"
 	c.Data["Email"] = "astaxie@gmail.com"
-	c.TplNames = "index.tpl"
+	c.TplName = "index.tpl"
 }
 
 func (c *MainController) URLMapping() {
@@ -21,5 +21,5 @@ func (c *MainController) URLMapping() {
 
 // @router /staticblock/:key [get]
 func (this *MainController) StaticBlock() {
-	this.TplNames = "index.tpl"
+	this.TplName = "index.tpl"
 }
