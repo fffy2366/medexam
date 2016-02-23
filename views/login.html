@@ -137,6 +137,20 @@
 					}
 					
 				});
+				document.getElementById('login').addEventListener('tap', function() {
+					var account = document.getElementById('account') ;
+					var password = document.getElementById('password') ;
+					$.post('/login',{
+						username:account.value,
+						password:password.value
+					},function(data){
+						//服务器返回响应，根据响应结果，分析是否登录成功；
+						if(data.retcode==0){
+							window.location.href="/" ;
+						}
+					},'json'
+				);
+				});
 			}(mui, document));
 		</script>
 	</body>
