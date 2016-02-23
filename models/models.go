@@ -1,6 +1,7 @@
 package models
 
 import (
+	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/orm"
 	_ "github.com/go-sql-driver/mysql" // import your used driver
 )
@@ -14,7 +15,7 @@ type Users struct {
 
 func init() {
 	// set default database
-	orm.RegisterDataBase("default", "mysql", "root:1234@/med_exam?charset=utf8", 30)
+	orm.RegisterDataBase("default", "mysql", beego.AppConfig.String("mysqluser")+":"+beego.AppConfig.String("mysqlpass")+"@/"+beego.AppConfig.String("mysqldb")+"?charset=utf8", 30)
 	// 需要在init中注册定义的model
 	orm.RegisterModel(new(Users))
 }
